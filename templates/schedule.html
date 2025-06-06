@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Расписание — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>Расписание</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>Расписание</h1>
+
+            <!-- Поиск маршрута -->
+            <section class="schedule-search">
+                <div class="route-search">
+                    <h2>Поиск маршрута</h2>
+                    <div class="search-form">
+                        <select class="route-select">
+                            <option value="">Выберите маршрут</option>
+                            <option value="1">Маршрут №1</option>
+                            <option value="2">Маршрут №2</option>
+                            <option value="3">Маршрут №3</option>
+                        </select>
+                        <select class="direction-select">
+                            <option value="">Выберите направление</option>
+                            <option value="forward">Прямое направление</option>
+                            <option value="backward">Обратное направление</option>
+                        </select>
+                        <button class="search-btn">Показать расписание</button>
+                    </div>
+                </div>
+
+                <!-- Таблица расписания -->
+                <div class="schedule-table">
+                    <h3>Расписание движения</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Остановка</th>
+                                <th>Будни</th>
+                                <th>Выходные</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вокзал</td>
+                                <td>6:00 - 23:00</td>
+                                <td>7:00 - 22:00</td>
+                            </tr>
+                            <tr>
+                                <td>Центр</td>
+                                <td>6:15 - 23:15</td>
+                                <td>7:15 - 22:15</td>
+                            </tr>
+                            <tr>
+                                <td>Рынок</td>
+                                <td>6:30 - 23:30</td>
+                                <td>7:30 - 22:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Дополнительная информация -->
+            <section class="additional-info">
+                <h2>Дополнительно</h2>
+                <p>
+                    Актуальное расписание вы можете посмотреть на сайте <a href="https://citybus35.ru"  target="_blank">Умный транспорт</a>.
+                </p>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

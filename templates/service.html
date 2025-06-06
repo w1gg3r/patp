@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Услуги — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>Услуги</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>Наши услуги</h1>
+
+            <!-- Каталог услуг -->
+            <section class="services-grid">
+                <div class="service-card">
+                    <img src="/static/images/card-1.avif" alt="Заказные перевозки">
+                    <h3>Заказные перевозки</h3>
+                    <p>Организация групповых поездок по городу и области.</p>
+                    <a href="/charter" class="service-btn">Подробнее</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="/static/images/card-2.avif" alt="Пассажирские перевозки">
+                    <h3>Пассажирские перевозки</h3>
+                    <p>Регулярные маршруты по городу для ежедневных поездок.</p>
+                    <a href="/passenger" class="service-btn">Подробнее</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="/static/images/card-3.jpg" alt="Перевозка детей">
+                    <h3>Перевозка детей</h3>
+                    <p>Безопасная и надежная доставка школьников и организованных групп.</p>
+                    <a href="/children" class="service-btn">Подробнее</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

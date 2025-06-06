@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Новости — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>Новости</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>Новости</h1>
+
+            <!-- Контейнер для новостей -->
+            <div id="news-container" class="news-grid"></div>
+
+            <!-- Пагинация -->
+            <div class="pagination" id="news-pagination"></div>
+        </div>
+    </div>
+</main>
+
+<!-- Подключаем JS для загрузки новостей -->
+<script src="/static/js/news.js"></script>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block title %}О компании — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>О компании</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>О компании</h1>
+
+            <!-- Заголовок с иконкой -->
+            <section class="hero-section">
+                <img src="/static/images/logo.png" alt="Иконка компании" class="icon">
+                <p class="lead">
+                    «ПАТП № 1» — крупнейший городской перевозчик в Вологде с историей более 80 лет. 
+                    Мы перевозим более 50 тысяч пассажиров ежедневно и обеспечиваем стабильность транспортной системы города.
+                </p>
+            </section>
+
+            <!-- История -->
+            <section class="history-section" class="advantages-section animate-on-scroll">
+                <h2>Наша история</h2>
+                <div class="timeline">
+                    <div class="timeline-card">
+                        <h3>1939 г.</h3>
+                        <p>Основание Вологодской автотранспортной конторы (АТК) на территории будущего СКДМ.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>1955 г.</h3>
+                        <p>Переезд на Пошехонское шоссе и преобразование в пассажирское автохозяйство (ПАХ).</p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>1986 г.</h3>
+                        <p>Разделение на ПАТП №1 и ПАТП №2. Новый адрес: ул. Мудрова, 31.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>2017 г.</h3>
+                        <p>Преобразование в Акционерное общество «ПАТП №1»</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Статистика -->
+            <section class="stats-section">
+                <h2>Наши достижения</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">маршрутов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">173</span>
+                        <span class="stat-label">км маршрутной сети</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">130</span>
+                        <span class="stat-label">единиц техники</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Социальная политика -->
+            <section class="social-policy" class="news-section animate-on-scroll">
+                <h2>Социальная политика</h2>
+                <div class="policy-grid">
+                    <div class="policy-card">
+                        <img src="/static/images/money.png" alt="Зарплата">
+                        <h3>Выплата зарплат</h3>
+                        <p>Зарплата всегда вовремя и в полном объеме</p>
+                    </div>
+                    <div class="policy-card">
+                        <img src="/static/images/worker.png" alt="Сотрудники">
+                        <h3>Для сотрудников</h3>
+                        <p>Бесплатные путевки в детские оздоровительные лагеря</p>
+                    </div>
+                    <div class="policy-card">
+                        <img src="/static/images/health.png" alt="Здоровье">
+                        <h3>Здоровье коллектива</h3>
+                        <p>Стационарный здравпункт и регулярные медосмотры</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Заключение -->
+            <section class="conclusion">
+                <p>
+                    Администрация предприятия успешно решает поставленные задачи. Об этом свидетельствуют производственные показатели за последние годы.
+                </p>
+                <p>
+                    АО «ПАТП № 1», работая в социальном секторе экономики, несмотря на непростую финансовую ситуацию, продолжает динамично развиваться и вносить посильный вклад в социально-экономическое развитие Вологды.
+                </p>
+                <div class="download-link">
+                    <a href="/uploads/Положеине об оценке коррупционных рисков.pdf" download>
+                        Скачать историю предприятия
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,253 @@
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ddd;
+}
+
+.admin-sidebar h2 {
+    font-size: 20px;
+    color: #0E75AD;
+    margin-bottom: 20px;
+}
+
+.admin-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.admin-menu li {
+    margin-bottom: 10px;
+}
+
+.admin-menu a {
+    text-decoration: none;
+    color: #0E75AD;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.admin-menu a:hover,
+.admin-menu a.active {
+    background-color: #0E75AD;
+    color: white;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+/* === Таблицы === */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.admin-table thead {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.admin-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.admin-table select {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* === Кнопки === */
+.btn.add-btn {
+    background-color: #28a745;
+}
+
+.btn.add-btn:hover {
+    background-color: #218838;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit {
+    background-color: #0E75AD;
+    color: white;
+}
+
+.delete {
+    background-color: #AE312E;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #085d8c;
+}
+
+.delete:hover {
+    background-color: #9e2b2b;
+}
+
+/* === Формы === */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #0E75AD;
+    outline: none;
+}
+
+.error {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+/* ========================= */
+/* === Шапка админки ===   */
+/* ========================= */
+
+.admin-header {
+    background-color: #0E75AD;
+    color: white;
+}
+
+.admin-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.admin-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.admin-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.admin-menu li a:hover {
+    color: #f9f9f9;
+}
+
+/* ========================= */
+/* === Контент админки === */
+/* ========================= */
+
+.admin-main {
+    padding: 40px 0;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table thead {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.admin-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.admin-table img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.edit {
+    background-color: #0E75AD;
+    color: white;
+}
+
+.delete {
+    background-color: #AE312E;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #085d8c;
+}
+
+.delete:hover {
+    background-color: #9e2b2b;
+}

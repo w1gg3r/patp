@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Пассажирские перевозки — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/service">Услуги</a></li>
+                <li><span>Пассажирские перевозки</span></li>
+            </ul>
+        </nav>
+
+        <div class="content-inner">
+            <h1>Пассажирские перевозки</h1>
+
+            <!-- Информационные карточки -->
+            <section class="features-section">
+                <div class="feature-card">
+                    <img src="/static/images/safety.png" alt="Безопасность">
+                    <h3>Безопасность</h3>
+                    <p>Все автобусы оснащены ремнями безопасности и проходят строгий технический контроль.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="/static/images/glons.png" alt="ГЛОНАСС">
+                    <h3>ГЛОНАСС</h3>
+                    <p>Каждый автобус отслеживается через спутниковую систему. Вы всегда знаете, где находится ваш автобус.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="/static/images/taxo.png" alt="Тахографы">
+                    <h3>Тахографы</h3>
+                    <p>Работаем только с исправными автобусами. Тахографы помогают контролировать режим водителя.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="/static/images/air-conditioner.png" alt="Кондиционеры">
+                    <h3>Комфорт</h3>
+                    <p>Все автобусы оснащены кондиционерами для комфортной поездки даже летом.</p>
+                </div>
+            </section>
+
+            <!-- Основной текст -->
+            <section class="description-section">
+                <p>
+                    ПАТП № 1 предоставляет услуги по пассажирским перевозкам на регулярных городских маршрутах.
+                    Наши автобусы ежедневно перевозят десятки тысяч пассажиров по самым разным направлениям.
+                </p>
+
+                <p>
+                    Мы гарантируем комфортную поездку, своевременное прибытие и безопасность пассажиров.
+                </p>
+            </section>
+
+            <!-- Контакты -->
+            <section class="contact-support">
+                <h2>Справки по телефонам:</h2>
+                <ul>
+                    <li><strong>Диспетчерский отдел:</strong> <a href="tel:+78172556670">(8172) 55-66-70</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a></li>
+                </ul>
+                <div class="button-wrapper">
+                    <a href="/support" class="btn">Оставить заявку</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

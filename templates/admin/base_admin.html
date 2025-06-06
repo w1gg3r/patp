@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Админ-панель — ПАТП №1 Вологда{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+
+<!-- Новая шапка админки -->
+<header class="admin-header">
+    <div class="container">
+        <nav class="admin-nav">
+            <ul class="admin-menu">
+                <li><a href="/admin/dashboard">Главная</a></li>
+                <li><a href="/admin/news">Новости</a></li>
+                <li><a href="/admin/job-applications">Заявки на работу</a></li>
+                <li><a href="/admin/service-requests">Заявки на услуги</a></li>
+                <li><a href="/admin/logout">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Основной контент админки -->
+<div class="admin-main">
+    {% block admin_content %}
+    {% endblock %}
+</div>
+
+<script src="/static/js/admin.js" defer></script>
+
+</body>
+</html>

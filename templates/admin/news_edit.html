@@ -1,0 +1,25 @@
+<form action="" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Заголовок:</label>
+        <input type="text" name="title" value="{{ news[1] }}" required>
+    </div>
+    <div class="form-group">
+        <label>Описание:</label>
+        <textarea name="description">{{ news[2] }}</textarea>
+    </div>
+    <div class="form-group">
+        <label>Дата:</label>
+        <input type="text" name="date" value="{{ news[4] }}" required>
+    </div>
+    <div class="form-group">
+        <label>Текущее изображение:</label>
+        <img src="{{ news[3] }}" alt="Текущее изображение" style="max-width: 200px; margin-bottom: 10px;">
+        <input type="file" name="image">
+        <p><strong>или</strong> введите новый URL изображения</p>
+    </div>
+    <div class="form-group">
+        <label>Новый URL изображения:</label>
+        <input type="text" name="image_path" value="{{ news[3] }}">
+    </div>
+    <button type="submit" class="btn">Обновить новость</button>
+</form>

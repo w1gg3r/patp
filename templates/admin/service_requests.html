@@ -1,0 +1,32 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Заявки на услуги — Админка{% endblock %}
+
+{% block admin_content %}
+<h2>Заявки на оказание услуг</h2>
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>Услуга</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if requests and requests|length > 0 %}
+            {% for req in requests %}
+            <tr>
+                <td>{{ req[0] }}</td>   <!-- id -->
+                <td>{{ req[1] }}</td>   <!-- name -->
+                <td>{{ req[2] }}</td>   <!-- phone -->
+                <td>{{ req[3] }}</td>   <!-- service_type -->
+                <td>{{ req[4] }}</td>   <!-- status -->
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr><td colspan="5">Нет заявок</td></tr>
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}

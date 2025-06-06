@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Заказать услугу / Работа у нас — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>Обратная связь</span></li>
+            </ul>
+        </nav>
+
+        <h1>Заказать услугу или оставить заявку на работу</h1>
+
+        <!-- Кнопки переключения -->
+        <div class="form-tabs">
+            <button class="tab-btn active" onclick="showForm('order')">Заказать услугу</button>
+            <button class="tab-btn" onclick="showForm('job')">Работа у нас</button>
+        </div>
+
+        <!-- Форма заказа услуги -->
+        <div id="order-form" class="feedback-form active">
+            <h2>Оформить заказ</h2>
+            <form id="service-order" action="/send" method="POST">
+                <div class="form-group">
+                    <label for="service">Выберите услугу:</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Выберите услугу --</option>
+                        <option value="charter">Заказные перевозки</option>
+                        <option value="passenger">Пассажирские перевозки</option>
+                        <option value="children">Перевозка детей</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-list">
+                    <div class="form-item-1">
+                        <label for="name">Ваше имя*</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-item-1">
+                        <label for="email">Ваш E-mail*</label>
+                        <input type="email" id="email" name="email" placeholder="ivanov@email.ru" required>
+                    </div>
+                    <div class="form-item-2">
+                        <label for="telephone">Телефон*</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="+7 (900) 000 00-00" required>
+                    </div>
+                </div>
+                <div class="qustions">
+                    <label for="message">Описание заказа*</label>
+                    <textarea id="message" name="message" placeholder="Опишите вашу задачу" required></textarea>
+                </div>
+                <div class="privacy-agreement">
+                    <label>
+                        <input type="checkbox" required>
+                        Соглашаюсь с условиями <a href="/uploads/mupatp_politic.pdf" target="_blank">политики конфиденциальности</a>
+                    </label>
+                </div>
+                <div class="button-2 form-submit-button">
+                    <button type="submit" class="btn-form submit-button">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Форма работы -->
+        <div id="job-form" class="feedback-form" style="display: none;">
+            <h2>Оставить заявку на работу</h2>
+            <form id="job-application" action="/send-job" method="POST">
+                <div class="form-list">
+                    <div class="form-item-1">
+                        <label for="job-name">Ваше имя*</label>
+                        <input type="text" id="job-name" name="job-name" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-item-1">
+                        <label for="job-email">Ваш E-mail*</label>
+                        <input type="email" id="job-email" name="job-email" placeholder="ivanov@email.ru" required>
+                    </div>
+                    <div class="form-item-2">
+                        <label for="job-phone">Телефон*</label>
+                        <input type="tel" id="job-phone" name="job-phone" placeholder="+7 (900) 000 00-00" required>
+                    </div>
+                </div>
+
+                <div class="qustions">
+                    <label for="job-resume">Прикрепите резюме</label>
+                    <input type="file" name="resume" id="job-resume" accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="qustions">
+                    <label for="job-message">Комментарий</label>
+                    <textarea id="job-message" name="job-message" placeholder="О себе..."></textarea>
+                </div>
+
+                <div class="privacy-agreement">
+                    <label>
+                        <input type="checkbox" required>
+                        Соглашаюсь с условиями <a href="/uploads/mupatp_politic.pdf" target="_blank">политики конфиденциальности</a>
+                    </label>
+                </div>
+                <div class="button-2 form-submit-button">
+                    <button type="submit" class="btn-form submit-button">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<script src="/static/js/support.js"></script>
+{% endblock %}
+
+
+<!-- JS для переключения форм -->

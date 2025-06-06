@@ -1,0 +1,41 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Заявки на работу — Админка{% endblock %}
+
+{% block admin_content %}
+<h2>Заявки на работу</h2>
+
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Сообщение</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if applications and applications|length > 0 %}
+            {% for app in applications %}
+            <tr>
+                <td>{{ app[0] }}</td>   <!-- id -->
+                <td>{{ app[1] }}</td>   <!-- name -->
+                <td>{{ app[2] }}</td>   <!-- email -->
+                <td>{{ app[3] }}</td>   <!-- phone -->
+                <td>{{ app[4]|truncate(50) }}</td>  <!-- message -->
+                <td>
+                    <select onchange="updateJobStatus({{ app[0] }}, this.value)">
+                        <option value="новое" {% if app[5] == 'новое' %}selected{% endif %}>новое</option>
+                        <option value="в обработке" {% if app[5] == 'в обработке' %}selected{% endif %}>в обработке</option>
+                        <option value="рассмотрено" {% if app[5] == 'рассмотрено' %}selected{% endif %}>рассмотрено</option>
+                    </select>
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr><td colspan="6">Нет заявок</td></tr>
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}

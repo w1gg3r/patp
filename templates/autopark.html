@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Автопарк — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about-us">О компании</a></li>
+                <li><span>Автопарк</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>Автопарк</h1>
+            <div class="autopark-content">
+                <p>
+                    Парк АО "ПАТП № 1" насчитывает порядка 150 машин как отечественного, так и зарубежного производства.
+                    Они подходят для самых разных транспортных задач. Все автобусы предприятия оборудованы кондиционерами,
+                    ремнями безопасности, тахографами и навигационной системой ГЛОНАСС, которая позволяет четко отслеживать маршрут движения автобусов и контролировать регулярность движения.
+                </p>
+                <p>
+                    Для улучшения качества обслуживания и обеспечения транспортной доступности маломобильных граждан,
+                    предприятие приобрело ряд низкопольных автобусов, не уступающих европейским аналогам. Они оборудованы
+                    системой книлинга (наклона пола при остановке в сторону дверей), пандусами и специально отведенными
+                    местами для инвалидных колясок.
+                </p>
+                <p>
+                    Для обеспечения высокого уровня технической готовности парка автобусов на ПАТП оборудованы участки по
+                    техническому обслуживанию и ремонту, благодаря чему значительно сокращается время простоя автобуса на ремонте.
+                </p>
+                <p>
+                    Паспорта доступности транспортных средств для пассажиров из числа инвалидов:
+                </p>
+                <ul class="passports-list">
+                    <li><a href="/uploads/Паспорт-1.pdf">Паспорт 1</a></li>
+                    <li><a href="/uploads/Паспорт-2.pdf">Паспорт 2</a></li>
+                    <li><a href="/uploads/Паспорт-3.pdf">Паспорт 3</a></li>
+                    <li><a href="/uploads/Паспорт-4.pdf">Паспорт 4</a></li>
+                    <li><a href="/uploads/Паспорт-5.pdf">Паспорт 5</a></li>
+                    <li><a href="/uploads/Паспорт-6.pdf">Паспорт 6</a></li>
+                    <li><a href="/uploads/Паспорт-7.pdf">Паспорт 7</a></li>
+                </ul>
+
+                <div class="bus-selection">
+                    <label for="bus-model">Выберите модель автобуса:</label>
+                    <select id="bus-model" name="bus-model">
+                        <option value="">-- Выберите модель --</option>
+                        <option value="liaz-5256">ЛиАЗ-5256</option>
+                        <option value="olimp-4252">Олимп-4252</option>
+                        <option value="olimp-4252.1">Олимп-4252.1</option>
+                        <option value="maz-206067">МАЗ-206067</option>
+                        <option value="liaz-529257">ЛиАЗ-529257</option>
+                        <option value="maz-103465">МАЗ 103465</option>
+                        <option value="maz-103565">МАЗ 103565</option>
+                        <option value="nefaz-5299-30-31">НЕФАЗ – 5299-0000030-31</option>
+                    </select>
+                </div>
+
+                <div class="bus-info" style="display: none;">
+                    <div class="bus-image">
+                        <img src="" alt="" id="bus-image">
+                    </div>
+                    <div class="bus-details">
+                        <h2><span id="bus-name"></span></h2>
+                        <p><strong>Описание:</strong> <span id="bus-description"></span></p>
+                        <p><strong>Габаритные размеры:</strong> <span id="bus-dimensions"></span></p>
+                        <p><strong>Пассажировместимость:</strong> <span id="bus-capacity"></span></p>
+                        <p><strong>Максимальная скорость:</strong> <span id="bus-max-speed"></span></p>
+                        <p><strong>Назначение:</strong> <span id="bus-purpose"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/static/js/bus-selector.js"></script>
+{% endblock %}

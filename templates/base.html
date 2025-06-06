@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>{% block title %}Пассажирские перевозки в Вологде - ПАТП № 1{% endblock %}</title>
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Инициализация Swiper (если используется)
+        document.addEventListener("DOMContentLoaded", function () {
+            if (document.querySelector(".mySwiper")) {
+                var swiper = new Swiper(".mySwiper", {
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                });
+            }
+        });
+    </script>
+
+    <!-- Подключение Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Инициализация слайдера
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+
+    <!-- Бургер-меню -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-list'); // Уточнено
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (!e.target.matches('.menu-toggle') && !menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

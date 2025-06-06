@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Оплата проезда — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span>Оплата проезда</span></li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <h1>Оплата проезда</h3>
+            <!-- Блок способов оплаты -->
+            <section class="payment-methods">
+                <div class="method-card">
+                    <h3>Банковской картой</h3>
+                    <img src="/static/images/bank-card.jpg" alt="Банковская карта">
+                    <p>Принимаются к оплате карты Visa, MasterCard, МИР и другие. Терминалы установлены во всех автобусах.</p>
+                    <a href="https://bilet.nspk.ru"  target="_blank" class="method-link">Подробнее →</a>
+                </div>
+
+                <div class="method-card">
+                    <h3>Электронная Вологда</h3>
+                    <img src="/static/images/e-vologda.jpeg" alt="Электронная Вологда">
+                    <p>Сервис для безналичной оплаты проезда через мобильное приложение.</p>
+                    <a href="https://e-vologda.com"  target="_blank" class="method-link">Подробнее →</a>
+                </div>
+
+                <div class="method-card">
+                    <h3>История поездок</h3>
+                    <img src="/static/images/cabinet-history.jpg" alt="t-karta.ru">
+                    <p>Отслеживайте историю поездок и получите информацию о ваших поездках онлайн.</p>
+                    <a href="https://t-karta.ru"  target="_blank" class="method-link">Подробнее →</a>
+                </div>
+
+                <div class="method-card">
+                    <h3>Онлайн-билет (QR-код)</h3>
+                    <img src="/static/images/qr-coder.jpg" alt="QR-код">
+                    <p>Купите билет онлайн и покажите QR-код водителю на входе.</p>
+                    <a href="/your-ticket" class="method-link">Подробнее →</a>
+                </div>
+            </section>
+
+            <!-- Дополнительная информация -->
+            <section class="additional-info">
+                <h2>Дополнительная информация</h2>
+                <p>
+                    Все виды оплаты фиксируются в системе. При необходимости вы можете запросить чек или получить информацию о поездках в личном кабинете.
+                </p>
+                <p>
+                    Более подробную информацию об оплате проезда вы можете получить по телефону:
+                    <strong><a href="tel:+78172556670">+7 (8172) 55-66-70</a></strong>
+                </p>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

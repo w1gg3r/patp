@@ -1,0 +1,31 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Управление новостями — Админка{% endblock %}
+
+{% block admin_content %}
+<h2>Список новостей</h2>
+<a href="/admin/news/add" class="btn add-btn">Добавить новость</a>
+
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Заголовок</th>
+            <th>Дата</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for news in news_list %}
+        <tr>
+            <td>{{ news[0] }}</td>
+            <td>{{ news[1] }}</td>
+            <td>{{ news[3] }}</td>
+            <td>
+                <a href="/admin/news/edit/{{ news[0] }}" class="action-btn edit">Редактировать</a>
+                <a href="/admin/news/delete/{{ news[0] }}" class="action-btn delete">Удалить</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ news.title }} — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><span id="news-title">{{ news.title }}</span></li>
+            </ul>
+        </nav>
+
+        <!-- Контент страницы -->
+        <div class="content-inner news-detail">
+            <h1>{{ news.title }}</h1>
+            <div class="news-date">{{ news.date }}</div>
+            <img src="{{ news.image }}" alt="Изображение новости" class="news-image">
+            <p>{{ news.description }}</p>
+        </div>
+    </div>
+</main>
+
+<!-- JS для работы с новостями -->
+<script src="/static/js/single-news.js"></script>
+{% endblock %}

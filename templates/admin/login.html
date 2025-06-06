@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Вход в админку — ПАТП №1 Вологда{% endblock %}
+
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <h2>Войдите в систему</h2>
+        <form action="/admin/login" method="POST">
+            <div class="form-group">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            <button type="submit" class="btn">Войти</button>
+        </form>
+    </div>
+</main>
+{% endblock %}
